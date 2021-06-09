@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test1</title>
-<script defer src="app.js"></script><script defer src="polyfill.js"></script></head>
-<body>
+  <script defer src="app.js"></script><script defer src="polyfill.js"></script></head>
+  <body>
     <div class="container">
-        helloddd
+      <div class="row">
+        <h1>To do app</h1>
+        <div class="col-md-3">
+          <h2>List of tasks</h2>
+          <div class="tasks-list"></div>
+        </div>
+        <div class="col-md-6">
+          <h2>Task description</h2>
+        </div>
+        <div class="col-md-3">
+          <h2>Add new Task</h2>
+          <form action="">
+            <div class="input-wrapper">
+              <label for="email">title</label
+              ><input
+                data-required="email"
+                data-invalid-value="enter valid email of task creator"
+                type="text"
+                name="email"
+                id="email"
+                class="form-control"
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="desc">description</label
+              ><textarea
+                data-required="desc"
+                data-invalid-value="enter valid description of  task"
+                type="text"
+                name="description"
+                id="desc"
+                class="form-control"
+                
+              ></textarea>
+            </div>
+            <button type="submit">add</button>
+          </form>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

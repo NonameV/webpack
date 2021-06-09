@@ -7,5 +7,7 @@ export function isValid(el){
     const regExpName = el.dataset.required;
     if(!regExpDic[regExpName]) return true;
     
+    
     return regExpDic[regExpName].test(el.value);
+    
 }
