@@ -1,5 +1,26 @@
-$body-color: red;
+$title-color: #21130d;
+$body-bg-color: #eab676;
+$sub-title-color: #063970;
+$task-title-color: #eeeee4;
+$task-desc-color: #154c79;
 
 body {
-  color: $body-color;
+  background-color: #eab676;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+label {
+  width: 100%;
+}
+@media (min-width: 1600px) {
+}
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1520px;
 }
