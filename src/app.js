@@ -6,6 +6,7 @@ import taskUI from './views/task';
 import uiConfig from './config/ui.config';
 import {isValid} from './helpers/formValidation';
 import formUI from './views/form';
+import taskDescUI from './views/taskDesc'
 
 
 const {titleInput, descInput, form} = uiConfig;
@@ -18,15 +19,20 @@ form.addEventListener('submit', function(e){
     if(onFormSubmit()){
         toDoesStore.addNewToDo(this.querySelector('#email').value, this.querySelector('#desc').value);
         taskUI.renderTasks(toDoesStore.toDoList);
-    }
-    
-    
+    }  
 })
 document.addEventListener('click', (e) => {
     if(e.target.className == 'delete'){
-        toDoesStore.removeToDO(e.target.parentElement.dataset.id);
+        toDoesStore.removeToDo(e.target.parentElement.dataset.id);
         taskUI.renderTasks(toDoesStore.toDoList);
     }
+})
+document.addEventListener('click', function({target}){
+    if(target.className == 'click-email'){ 
+        toDoesStore.showToDoDesc(target.parentElement.dataset.id.toString());
+        taskDescUI.renderTaskDesc(toDoesStore.toDoDescList);
+    }
+    
 })
 
 function onFormSubmit(){

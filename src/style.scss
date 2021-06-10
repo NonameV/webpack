@@ -3,24 +3,76 @@ $body-bg-color: #eab676;
 $sub-title-color: #063970;
 $task-title-color: #eeeee4;
 $task-desc-color: #154c79;
+$danger-color: rgb(220, 53, 69);
 
 body {
-  background-color: #eab676;
+  background-color: $body-bg-color;
+  padding-top: 50px;
 }
 h1 {
   text-align: center;
   margin-bottom: 50px;
+  color: $title-color;
+}
+h2 {
+  color: $sub-title-color;
+  margin-bottom: 30px;
 }
 label {
   width: 100%;
 }
-@media (min-width: 1600px) {
+
+form {
+  .input-wrapper {
+    margin-bottom: 20px;
+  }
+  label {
+    color: $sub-title-color;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  .invalid-feedback-message {
+    color: $danger-color;
+  }
 }
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  max-width: 1520px;
+.task {
+  .click-email {
+    cursor: pointer;
+    color: $task-title-color;
+    transition: 0.3s;
+    &:hover {
+      color: $task-desc-color;
+    }
+  }
+  p {
+    color: $title-color;
+    font-size: 1.1rem;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .delete {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: $danger-color;
+    color: $body-bg-color;
+    transition: 0.3s;
+    border-radius: 5px;
+    &:hover {
+      background-color: $body-bg-color;
+      color: $danger-color;
+    }
+  }
+}
+// media queries
+@media (min-width: 1600px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1520px;
+  }
 }

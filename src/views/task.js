@@ -15,10 +15,10 @@ class TaskUI{
     }
     static taskTemplate({taskName, taskDesc, id}){
         return `<div class='task' data-id='${id}'>
-            <h4>${taskName}</h4>
+            <h4 class='click-email'>${taskName}</h4>
             <p>${taskDesc}</p>
             <span class='delete'>delete</span>
-        </div>`
+        </div> <hr/>`
     }
     clearTaskContainer(){
         this.container.innerHTML = '';

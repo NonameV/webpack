@@ -11,7 +11,7 @@ class FormUI{
     }
     addInValidMessage(e){
         if(e.parentElement.querySelector('.invalid-feedback-message')){
-            e.parentElement.removeChild(document.querySelector('.invalid-feedback-message'));
+            e.parentElement.removeChild(e.parentElement.querySelector('.invalid-feedback-message'));
         }
         e.insertAdjacentHTML('afterend', FormUI.invalidTemplate(e.dataset.invalidValue));
     }
